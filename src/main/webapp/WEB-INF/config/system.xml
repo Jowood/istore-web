@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="system.xsd">
+    <!--系统设置 start-->
+    <parameter>
+        <description>系统名称</description>
+        <key>systemName</key>
+        <value>文件管理</value>
+    </parameter> 
+
+    <parameter>
+        <description>机构名称</description>
+        <key>orgName</key>
+        <value>乌鲁木齐女子劳教所</value>
+    </parameter>
+
+
+    <parameter>
+        <description>是否使用加密狗登录</description>
+        <key>key</key>
+        <value>false</value>
+    </parameter>
+
+    <parameter>
+        <description>是否需要输入密码登录</description>
+        <key>pw</key>
+        <value>true</value>
+    </parameter>
+
+    <parameter>
+        <description>菜单类型:tree, menu (单系统用户的菜单)</description>
+        <key>menuType</key>
+        <value>tree</value>
+    </parameter>
+
+    <!--
+     <parameter>
+       <description>oracle排序规则</description>
+       <key>nls_sort</key>
+       <value>SCHINESE_PINYIN_M</value>
+     </parameter>
+    -->
+
+    <!--文件上传设置 start-->
+    <parameter>
+        <description>文件上传临时目录</description>
+        <key>tempDirectory</key>
+        <value>/temp</value>
+    </parameter>
+
+    <parameter>
+        <description>文件上传内存占用大小</description>
+        <key>maxMemorySize</key>
+        <value>1024</value>
+    </parameter>
+
+    <parameter>
+        <description>文件上传最大尺寸</description>
+        <key>maxRequestSize</key>
+        <value>10240000</value>
+    </parameter>
+
+    <parameter>
+        <description>文件上传字符集</description>
+        <key>uriEncoding</key>
+        <value>UTF-8</value>
+    </parameter>
+    <!--文件上传设置 end-->
+
+    <!--报表打印设置 start-->
+    <parameter>
+        <description>报表applet包名称</description>
+        <key>reportApplet</key>
+        <value>PrintApplet.jar</value>
+    </parameter>
+
+    <parameter>
+        <description>报表编译参数</description>
+        <key>reportComplie</key>
+        <value>true</value>
+    </parameter>
+
+    <parameter>
+        <description>报表文件路径参数</description>
+        <key>reportPath</key>
+        <value>/WEB-INF/reports</value>
+    </parameter>
+    <!--报表打印设置 end-->
+     <parameter>
+       <description>盛大云</description>
+       <key>baseURL</key>
+       <value>http://storage.grandcloud.cn</value>
+     </parameter>    
+     <parameter>
+       <description>盛大云</description>
+       <key>accessKey</key>
+       <value>itjmkg6osxh038wko</value>
+     </parameter>
+     <parameter>
+       <description>盛大云</description>
+       <key>secretAccessKey</key>
+       <value>NzIxODQ1MGUwNzJlMzJlZmIwMzIxZTQyYmExYWZhNzg=</value>
+     </parameter>  
+     <parameter>
+       <description>盛大云</description>
+       <key>bucket</key>
+       <value>qq911110yufeia</value>
+     </parameter>           
+</application>

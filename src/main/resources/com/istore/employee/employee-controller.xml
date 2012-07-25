@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="ebook_Controller" class="com.framework.controller.MultiControllerUrlHandlerMapping"/>
+    <!--employee 控制器-->
+    <bean id="employeeController" class="com.istore.employee.controller.EmployeeController"> 
+    	<property name="employeeService" ref="employeeService"/>
+        <property name="viewPath" value="emp"/> 
+        <property name="urlSuffix" value=".emp"/>
+    </bean> 
+
+</beans>

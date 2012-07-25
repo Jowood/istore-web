@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd ">  
+
+    <bean id="jobtask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	  <property name="targetObject" ref="ebookService" /><!--关联的bean-->
+	  <property name="targetMethod" value="synchroCloud" /><!--关联的bean的方法--> 
+    </bean>
+
+    <bean id="cron" class="org.springframework.scheduling.quartz.CronTriggerBean">
+      	<property name="jobDetail" ref="jobtask" />
+  		<property name="cronExpression" value="0 59 23 * * ?" />  
+    </bean> 
+    <bean id="z" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	  <property name="triggers">
+	   <list>
+	    <ref bean="cron" />
+	   </list>
+	  </property>
+	</bean>
+</beans>

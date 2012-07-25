@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Users> 
+  <User loginName="admin"> 
+    <Name>张三</Name>  
+    <LoginName>admin</LoginName>  
+    <Password>hepec1yd</Password> 
+  </User>  
+  <User loginName="CML"> 
+    <Name>蔡敏露</Name>  
+    <LoginName>CML</LoginName>  
+    <Password>19850908</Password> 
+  </User>  
+  <User loginName="boss"> 
+    <Name>黄建勇</Name>  
+    <LoginName>boss</LoginName>  
+    <Password>123</Password> 
+  </User>  
+  <User loginName="zhangxin"> 
+    <Name>张欣</Name>  
+    <LoginName>zhangxin</LoginName>  
+    <Password>123</Password> 
+  </User>  
+  <User loginName="liufeng"> 
+    <Name>刘枫</Name>  
+    <LoginName>liufeng</LoginName>  
+    <Password>88925897</Password> 
+  </User>  
+  <User loginName="daijie"> 
+    <Name>戴杰</Name>  
+    <LoginName>daijie</LoginName>  
+    <Password>106464</Password> 
+  </User>  
+  <User loginName="wanghuaichao"> 
+    <Name>王槐超</Name>  
+    <LoginName>wanghuaichao</LoginName>  
+    <Password>123</Password> 
+  </User>  
+  <User loginName="DEC_S"> 
+    <Name>东方S厂</Name>  
+    <LoginName>DEC_S</LoginName>  
+    <Password>123</Password> 
+  </User>  
+  <User loginName="DEC_B"> 
+    <Name>东方B厂</Name>  
+    <LoginName>DEC_B</LoginName>  
+    <Password>123</Password> 
+  </User>  
+  <User loginName="TIANJING">
+    <Name>田婧</Name>
+    <LoginName>TIANJING</LoginName>
+    <Password>123</Password>
+  </User>
+</Users>

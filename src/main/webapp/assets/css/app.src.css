@@ -1,0 +1,311 @@
+/* global */
+html {
+	overflow: hidden;
+}
+h1 {
+	display: none;
+}
+
+/* common use */
+.page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 418px;
+	height: 498px;
+	overflow: scroll;
+	text-align: center;
+	user-select:none;
+	-moz-user-select:-moz-none; /* excluding inputs */
+	-webkit-user-select:none;
+}
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom:1;
+	height:168px;
+	padding:2px 0 6px 0;  
+}
+.invisible {
+	display: none;
+}
+.transparent {
+	visibility: hidden;
+}
+
+/* button */
+.btn,
+.btn s ,
+.btn span {
+	background: url(./../img/shelf_button.png) no-repeat scroll 16px 72px transparent;
+	_background-image: url(./../img/_shelf_button.png);
+}
+.btn {
+	display: inline-block;
+	position: relative;
+	padding: 0 8px;
+	line-height: 32px;
+	text-decoration: none;
+	*cursor: pointer;
+}
+.btn:hover {
+	text-decoration: none;
+}
+.btn span {
+	display: block;
+	_display:inline-block;
+	height: 36px;
+	padding: 0 15px;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+.btn .btn-l,
+.btn .btn-r {
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 36px;
+	top: 0;
+}
+.btn .btn-l {
+	left: 0;
+	background-position: 0 -36px;
+}
+.btn .btn-r {
+	right: 0;
+	background-position: 100% -36px;
+}
+
+/* shelf page */
+#shelf {
+	color: #fff;
+	background: url(./../img/shelf_bg.jpg) repeat scroll 50% 0 #B9832D;
+}
+#shelf a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* shelf header */
+#shelf .header {
+	background: url(./../img/shelf_header_bg.png) repeat-x scroll 0 0 #D9AE83;
+	height: 42px;
+	overflow: hidden;
+	border-bottom: 1px solid #F9E8CC;
+	text-align: right;
+	position: relative; /* raise it */
+}
+
+/* shelf header buttons */
+#shelf .header #shelf-index-button {
+	margin: 6px;
+	margin-left: 0; /* to prevent the button from shaking */
+}
+
+/* shelf book stacks */
+#shelf #stack {
+	width: 380px;
+	height: 1589px;
+	overflow: hidden;
+	margin: 0 auto;
+	background: url(./../img/shelf_board.png) repeat scroll 0 100% transparent;
+	
+	margin-top: -6px;
+}
+#shelf #stack-wrap {
+	width: 380px; /* width of a single stake by default */
+}
+#shelf ul {
+	float: left;
+	width: 380px; 
+	overflow: hidden;
+	margin: 6px 0 0 0; 
+}
+#shelf ul li {
+	float: left;
+	height: 170px; 
+	/*padding-bottom: 36px; /* margin-bottom doesn't work for ie6 */
+	overflow: hidden;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/img/_shelf_board_shadow.png', sizingMethod='crop');
+}
+#shelf ul li a {
+	display: block;
+	_width: 95px;
+	*cursor: pointer;
+}
+
+#shelf ul li a div {
+	display: block;
+	height: 170px;
+	width: 46px;
+	margin-left:1px;
+	vertical-align:middle;
+	font-weight:bold;
+	overflow: hidden; 
+	
+	background: url(./../img/def_book_icon.png) no-repeat scroll 50% 90% transparent;
+}
+
+/* pagination */
+#shelf .pagination {
+	margin-top: -20px;
+}
+#shelf .pagination a {
+	display:-moz-inline-box;
+	display:inline-block;
+	margin:0 3px;
+	padding:2px;
+	width: 8px;
+	height: 7px;
+	overflow: hidden;
+	line-height:99px;
+	vertical-align:middle;
+	background: url(./../img/pagination.png) no-repeat scroll 2px 2px transparent;
+	_background-image: url(./../img/_pagination.png);
+}
+#shelf .pagination a:hover,
+#shelf .pagination a.selected {
+	background-position: 2px -9px;
+}
+
+/* book page */
+#book {
+	color: #707983;
+	background: url(./../img/book_bg.jpg) no-repeat scroll 50% 0 #FCFCFC;
+}
+#book a {
+	color: #3F4853;
+	text-decoration: none;
+}
+
+/* book button */
+#book .btn,
+#book .btn s ,
+#book .btn span {
+	background-image: url(./../img/book_button.png);
+	_background-image: url(./../img/_book_button.png);
+}
+#book .btn span {
+	height: 32px;
+	padding: 0 7px;
+}
+#book .btn .btn-l,
+#book .btn .btn-r {
+	height: 32px;
+}
+#book .btn .btn-l {
+	background-position: 0 -32px;
+}
+#book .btn .btn-r {
+	background-position: 100% -32px;
+}
+
+/* book header */
+#book .header {
+	height: 74px;
+	overflow: hidden;
+	text-align: right;
+}
+
+/* book header button */
+#book .header .btn {
+	margin: 25px;
+}
+#book .header .btn span {
+	padding: 0;
+}
+
+/* book content */
+#book #content {
+	width: 336px;
+	height: 320px;
+	overflow: hidden;
+	line-height: 20px;
+	/*text-indent: 2em;*/
+	text-align: left;
+	margin: 0 auto;
+}
+
+/* pagination */
+#book .pagination {
+	height: 104px;
+	overflow: hidden;
+	text-align: left;
+	text-align: center;
+	line-height: 140px;
+}
+#book .pagination .btn {
+	margin-top: 52px;
+}
+#book .pagination #book-prev-button {
+	float: left;
+	margin-left: 40px;
+}
+#book .pagination #book-next-button {
+	float: right;
+	margin-right: 22px;
+}
+
+/* overlay page */
+#overlay .mask,
+#overlay .indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: -50em;
+	cursor: progress;
+}
+#overlay .mask {
+	background: #000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+#overlay .indicator {
+	background: url(./../img/loading.gif) no-repeat scroll 50% 50% transparent;
+}
+.outer { 
+	float: left;
+	height: 170px;
+    overflow: hidden;
+    position: relative; 
+    width: 46px;  
+    cursor:pointer; 
+    font: bold 13px/1.2 tahoma,arial,黑体,sans-serif; 
+} 
+
+.outer[class] {
+        display: table;
+        position: static;
+} 
+
+.middle {
+        position: absolute;
+        top: 50%;
+} /* for explorer only*/ 
+
+.middle[class] {
+        display: table-cell;
+        vertical-align: middle;
+        position: static;
+} 
+
+.inner {
+        position: relative;
+        top: -50%;
+        width: 30px;
+        margin: 0 0 0 16px;
+} /* for explorer only */ 
+
+.greenBorder {
+	letter-spacing:1em;
+	word-wrap: break-word;
+	word-break: normal; 
+}

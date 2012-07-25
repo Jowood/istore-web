@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="login_Controller" class="com.framework.controller.MultiControllerUrlHandlerMapping"/>
+    <!--登录-->
+    <bean id="loginController" class="com.istore.login.controller.LoginController"> 
+    	<property name="userLoginService" ref="userLoginService"/>
+    	<property name="userManagement" ref="noSqlUserService"/>
+        <property name="viewPath" value="login"/> 
+        <property name="urlSuffix" value=".login"/>
+    </bean>
+
+
+</beans>

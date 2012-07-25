@@ -1,0 +1,169 @@
+/*v1.0 | 20080212*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    font-size: 12px;
+    font-family: '宋体';
+}
+
+div .clear {
+
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    overflow: hidden;
+}
+
+a.disabled {
+    color: silver;
+}
+
+/*设置未访问过的连接属性*/
+a:link {
+    text-decoration: none;
+    color: steelblue;
+    font-size: 12px;
+}
+
+/*设置访问过的连接属性*/
+a:visited {
+    text-decoration: none;
+    color: steelblue;
+    font-size: 12px;
+}
+
+/*鼠标悬停时*/
+a:hover {
+    text-decoration: underline;
+    color: orangered;
+    font-size: 12px;
+}
+
+/*鼠标点击释放之间时*/
+a:active {
+    text-decoration: none;
+    color: purple;
+    font-size: 12px;
+}
+
+.renderTD {
+    background: #ffffcd;
+    font-weight: bold;
+}
+
+.buttonTool {
+    text-align: right;
+    width: 99%;
+    height: 30px;
+    vertical-align: middle;
+    padding: 5px 0 0 0;
+}
+
+.main {
+    background-color: #6af;
+    padding: 10px
+}
+
+.mainbody {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.rounded-corner {
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    text-align: left;
+
+}
+
+/*start 带圆角的table样式*/
+.rounded-corner thead th.rounded-company {
+    background: url("/images/corner/left.png") no-repeat scroll left -1px #B9C9FE;
+}
+
+.rounded-corner thead th.rounded-q4 {
+    background: url("/images/corner/right.png") no-repeat scroll right -1px #B9C9FE;
+}
+
+.rounded-corner th {
+    background: none repeat scroll 0 0 #B9C9FE;
+    color: #003399;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+}
+
+.rounded-corner td {
+    background: none repeat scroll 0 0 #E8EDFF;
+    border-top: 1px solid #FFFFFF;
+    color: #666699;
+    padding: 3px;
+}
+
+.rounded-corner tfoot td.rounded-foot-left {
+    background: url("/images/corner/botleft.png") no-repeat scroll left bottom #E8EDFF;
+}
+
+.rounded-corner tfoot td.rounded-foot-right {
+    background: url("/images/corner/botright.png") no-repeat scroll right bottom #E8EDFF;
+}
+
+.rounded-corner tbody tr:hover td {
+    background: none repeat scroll 0 0 #D0DAFD;
+}
+/*end 带圆角的table样式*/

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="ebook_Controller" class="com.framework.controller.MultiControllerUrlHandlerMapping"/>
+    <!--ebook 控制器-->
+    <bean id="ebookController" class="com.istore.ebook.controller.EBookController"> 
+    	<property name="ebookService" ref="ebookService"/>
+    	<property name="downloadServices" ref="downloadServices"/>
+        <property name="viewPath" value="ebook"/> 
+        <property name="urlSuffix" value=".ebook"/>
+    </bean>
+    <bean id="projectController" class="com.istore.ebook.controller.ProjectController">  
+    	<property name="projectService" ref="projectService"/>
+        <property name="viewPath" value="project"/> 
+        <property name="urlSuffix" value=".ebook"/>
+    </bean>
+
+</beans>

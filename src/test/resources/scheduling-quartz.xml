@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">  
+<beans>  
+<!--起动Bean-->  
+ <bean id="z" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+    <property name="triggers">  
+        <list>  
+      
+            <ref bean="cronReportTrigger"/>  
+        </list>  
+    </property>  
+ </bean>   
+<!--实际的工作Bean-->  
+  <bean id="courseService" class="com.spring.helloworld.CourseService"></bean>  
+<!--jobBean用于设定启动时运用的Bean与方法-->  
+ <bean id="scheduledReportJobDetail"    
+class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+     <property name="targetObject">  
+        <ref  bean="courseService"/>    
+     </property>  
+     <property name="targetMethod">  
+         <value>sendCourseEnrollmentReport</value>  
+     </property>  
+ </bean>  
+<!--定时器设定起动频率&启动时间我设的是每5秒起动一次 (0 0  4 * * ?每日四点起动....)-->  
+ <bean id="cronReportTrigger"   
+class="org.springframework.scheduling.quartz.CronTriggerBean">  
+ <property  name="jobDetail"><ref bean="scheduledReportJobDetail"/>  
+ </property>  
+ <property name="cronExpression"><value>10,15,20,25,30,35,40,45,50,55 * * * * ?</value>    
+</property>  
+ </bean>  
+      
+</beans>  

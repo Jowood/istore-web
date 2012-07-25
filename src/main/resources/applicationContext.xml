@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+    <!--<dwr:controller id="dwrController" debug="false"/>-->
+    <dwr:configuration>
+        <!--
+                <dwr:init>
+                    <dwr:converter id="date" class=""/>
+                </dwr:init>
+        -->
+        <dwr:convert class="java.lang.Exception" type="exception"/>
+        <dwr:convert class="java.lang.StackTraceElement" type="bean"/>
+        <dwr:convert class="java.lang.Object" type="bean"/>
+        <dwr:convert class="mapping.*" type="bean"/>
+
+
+    </dwr:configuration>
+
+    <!--返回的视图资源的前缀和后缀，基于Jstl模板 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+    </bean>
+
+    <!--启动加载异常处理的类，用于监听各控制器中触发的异常 -->
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="defaultErrorView" value="error.jsp"/>
+    </bean> 
+	 
+<!--     <bean id="tracker" class="com.framework.comet.MessageReverseAjaxTracker">
+        <dwr:remote javascript="Tracker">
+        </dwr:remote>
+    </bean> -->
+    <!--<bean id="multiHandler" class="controller.MultiControllerUrlHandlerMapping"/>-->
+
+
+</beans>
